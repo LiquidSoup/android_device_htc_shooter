@@ -73,8 +73,8 @@ TARGET_BOOTANIMATION_USE_RGB565 := true
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/shooter
 
 # Vendor Init
-#TARGET_INIT_VENDOR_LIB := libinit_msm
-#TARGET_LIBINIT_DEFINES_FILE := device/htc/shooter/init/init_shooter.c
+TARGET_INIT_VENDOR_LIB := libinit_msm
+TARGET_LIBINIT_DEFINES_FILE := device/htc/shooter/init/init_shooter.c
 
 # cat /proc/emmc
 #dev:        size     erasesize name
