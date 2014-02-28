@@ -53,19 +53,6 @@ on fs
 
     setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
 
-    symlink /system/vendor/firmware/fw_bcmdhd.bin /vendor/firmware/fw_bcmdhd.bin
-    symlink /system/vendor/firmware/fw_bcmdhd_apsta.bin /vendor/firmware/fw_bcmdhd_apsta.bin
-    symlink /system/vendor/firmware/fw_bcmdhd_p2p.bin /vendor/firmware/fw_bcmdhd_p2p.bin
-    symlink /system/vendor/firmware/bcm4329.hcd /vendor/firmware/bcm4329.hcd
-
-    # HACK: We need to re-do the firmware
-    # mounting / symlinking this will do for now.
-    symlink /system/vendor/lib /vendor/lib
-
-    mkdir /vendor/etc 0771 system system
-    symlink /system/vendor/etc/audio_effects.conf /vendor/etc/audio_effects.conf
-    symlink /system/vendor/etc/audio_policy.conf /vendor/etc/audio_policy.conf
-
 on post-fs-data
     # double check the perms and set owner
     chown root root /devlog
@@ -117,10 +104,10 @@ on boot
     mkdir /data/misc/dhcp 0770 dhcp dhcp
 
     #wimax
-    mkdir /data/misc/wimax 0770 wimax wimax
-    mkdir /data/misc/wimax/sockets 0770  wimax wimax
-    mkdir /data/wimax/ 0770  system system
-    mkdir /data/wimax/log 0770  system system
+#    mkdir /data/misc/wimax 0770 wimax wimax
+#    mkdir /data/misc/wimax/sockets 0770  wimax wimax
+#    mkdir /data/wimax/ 0770  system system
+#    mkdir /data/wimax/log 0770  system system
 
     # create symlink for fb1 as HDMI
     symlink /dev/graphics/fb1 /dev/graphics/hdmi
