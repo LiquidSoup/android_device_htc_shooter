@@ -52,7 +52,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     if (!rc || !ISMATCH(platform, ANDROID_TARGET))
         return;
 
-    property_get("ro.boot.bootloader", bootloader);
+    property_get("ro.bootloader", bootloader);
 
     if (strstr(bootloader, "1.04.2000" || "1.40.1100" || "1.40.0000" || "1.40.1000")) {
          /* shooter */
