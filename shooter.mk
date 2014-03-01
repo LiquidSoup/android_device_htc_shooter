@@ -37,10 +37,6 @@ PRODUCT_COPY_FILES += \
     device/htc/shooter/recovery/sbin/detect_key:recovery/root/sbin/detect_key \
     device/htc/shooter/recovery/sbin/htcbatt:recovery/root/sbin/htcbatt
 
-## apns
-PRODUCT_COPY_FILES += \
-    device/htc/shooter/prebuilt/system/etc/apns-conf.xml:system/etc/apns-conf.xml
-
 ## dsp Audio
 PRODUCT_COPY_FILES += \
     device/htc/shooter/dsp/AIC3254_REG.csv:system/etc/AIC3254_REG.csv \
@@ -118,7 +114,8 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_PACKAGES += \
     make_ext4fs \
     e2fsck \
-    setup_fs
+    setup_fs \
+    libinit_msm
 
 # WiMAX support
 #PRODUCT_PACKAGES += \
