@@ -67,8 +67,7 @@ ro.phone_storage = 0
 # Make rmt_storage start at init
 ro.emmc = 1
 
-# UMS
-persist.sys.usb.config=mass_storage,adb
+persist.sys.usb.config=mtp,adb
 
 # System property for cabl
 ro.qualcomm.cabl=1
